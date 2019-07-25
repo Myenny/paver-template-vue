@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import NavBar from "@/components/pages/NavBar.vue";
-import Footer from "@/components/pages/Footer.vue";
+import NavBar from "@/components/NavBar.vue";
+import Footer from "@/components/Footer.vue";
 import router from "./router.js";
 // import Home from "@/components/pages/Home.vue";
 

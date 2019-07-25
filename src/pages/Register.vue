@@ -84,7 +84,7 @@
 
 
 <script>
-import UserClass from "@/components/models/UserClass.js";
+import UserClass from "@/assets/models/UserClass.js";
 // import { EventBus } from "../models/eventbus.js";
 
 export default {

@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import ContactUs from '@/components/pages/ContactUs.vue'
-import Home from '@/components/pages/Home.vue'
-import Users from '@/components/pages/User.vue'
-import Register from '@/components/pages/Register.vue'
-import Welcome from '@/components/pages/Welcome.vue'
+import ContactUs from '@/pages/ContactUs.vue'
+import Home from '@/pages/Home.vue'
+import Users from '@/pages/User.vue'
+import Register from '@/pages/Register.vue'
+import Welcome from '@/pages/Welcome.vue'
 
 Vue.use(Router)
 
