@@ -1,11 +1,11 @@
 <template>
   <div>
     <nav class="navbar is-fixed-bottom">
-      <button @click="callPhone" class="button is-large is-fullwidth is-primary">
+      <button @click="callPhone" class="button is-large is-fullwidth is-success">
         <span class="icon is-small">
-          <i class="fas fa-phone-alt"></i>
+          <i class="fas fa-phone-alt fa-fw"></i>
         </span>
-        Call Now!
+        <h1>Call Now!</h1>
       </button>
     </nav>
   </div>
@@ -26,5 +26,8 @@ export default {
 };
 </script>
 
-<style>
+<style scoped="scss">
+button {
+  padding-top: 20px;
+}
 </style>

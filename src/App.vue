@@ -1,9 +1,8 @@
 <template>
   <div id="app">
     <NavBar />
-    <Footer />
-
     <router-view />
+    <Footer />
   </div>
 </template>
 
@@ -28,10 +27,8 @@ export default {
 
 
 <style>
-html,
-body {
-  background-color: #000519;
-  height: 100%;
+html {
+  background-color: #000519 !important;
 }
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
@@ -40,6 +37,5 @@ body {
   text-align: center;
   color: #2c3e50;
   background-color: #000519;
-  height: 100%;
 }
 </style>
