@@ -1,16 +1,14 @@
 <template>
   <div>
-    <!-- <nav class="navbar" role="navigation" aria-label="dropdown navigation">
-    <div class="navbar-brand">-->
-    <nav class="navbar" role="navigation" aria-label="dropdown navigation">
-      <div class="navbar-start">
+    <nav class="navbar-end" role="navigation" aria-label="dropdown navigation">
+      <div class="navbar-end">
         <a class="navbar-item has-dropdown" href="https://www.spathesystems.com/">
           <img src="@/assets/logo.png" />
         </a>
         <a
           @click="toggleHamburgerMenu"
           role="button"
-          class="navbar-burger"
+          class="navbar-burger burger"
           v-bind:class="{'is-active':showHamburgerMenu}"
           aria-label="menu"
           aria-expanded="false"
@@ -26,13 +24,29 @@
         class="navbar-menu has-dropdown has-dropdown-up is-hoverable"
         v-bind:class="{'is-active':showHamburgerMenu}"
       >
-        <div class="navbar-start">
+        <div class="navbar-end">
           <div class="navbar-item has-dropdown has-dropdown-up is-hoverable">
             <a class="navbar-item" v-on:click="route('Home')">Home</a>
             <a class="navbar-item" v-on:click="route('Register')">Register</a>
             <a class="navbar-item" v-on:click="route('ContactUs')">Contact Us</a>
             <a class="navbar-item" v-on:click="route('Users')">Users</a>
             <a class="navbar-item" v-on:click="route('Welcome')">Welcome</a>
+            <div class="navbar-item">
+              <p class="control">
+                <a class="button">
+                  <span class="icon">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                  </span>
+                </a>
+              </p>
+              <p class="control">
+                <a class="button">
+                  <span class="icon">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                  </span>
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -62,5 +76,8 @@ export default {
 };
 </script>
 
-<style>
+<style scoped="scss">
+.navbar {
+  background-color: #000519;
+}
 </style>

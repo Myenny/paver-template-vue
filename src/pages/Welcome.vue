@@ -1,65 +1,96 @@
 <template>
-  <div class="container box">
-    <img alt="Vue logo" src="@/assets/logo.png" />
-
-    <section class="hero is-primary">
-      <div class="hero-body">
+  <div>
+    <div class="columns">
+      <!-- first column -->
+      <div class="column">
+        <section class="section">
+          <h1 class="title">Title</h1>
+          <p
+            class="box"
+          >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, qui fugiat laboriosam vel odit debitis animi assumenda aperiam eveniet aspernatur facere dolorum omnis officiis pariatur a, aliquid eum nam! Saepe!</p>
+          <h2 class="title is-2">Contact Us Today for Free Stuff</h2>
+          <a @click="fullSizeImg()" class="button is-info">Button</a>
+        </section>
+      </div>
+      <!-- second column -->
+      <div class="column">
         <div class="container">
-          <h1 class="title">WELCOME</h1>
-          <h2 class="subtitle">You are checked in {{ fullName }}</h2>
-          <input v-model="fullName" />
-          <button v-on:click="welcome">Welcome Message</button>
-          <h1 v-for="post in posts" v-bind:key="post.id" v-bind:post="post">{{post.title}}</h1>
-          <input
-            type="checkbox"
-            v-bind:checked="checked"
-            v-on:change="$emit('change', $event.target.checked)"
-          />
+          <section class="section">
+            <figure class="image is-1by1">
+              <img src="https://bulma.io/images/placeholders/128x128.png" />
+            </figure>
+          </section>
+
+          <section class="section">
+            <div class="columns">
+              <div class="column is-one-quarter">
+                <figure class="image is-96x96" @click="fullSizeImg()">
+                  <img src="https://bulma.io/images/placeholders/128x128.png" />
+                </figure>
+              </div>
+
+              <div class="column is-one-quarter">
+                <figure class="image is-96x96">
+                  <img src="https://bulma.io/images/placeholders/128x128.png" />
+                </figure>
+              </div>
+
+              <div class="column is-one-quarter">
+                <figure class="image is-96x96">
+                  <img src="https://bulma.io/images/placeholders/128x128.png" />
+                </figure>
+              </div>
+
+              <div class="column is-one-quarter">
+                <figure class="image is-96x96">
+                  <img src="https://bulma.io/images/placeholders/128x128.png" />
+                </figure>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
-    </section>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "Welcome",
-  model: {
-    prop: "checked",
-    event: "change"
-  },
-  props: {
-    title: String,
-    likes: Number,
-    isPublished: Boolean,
-    commentIds: Array,
-    author: Object,
-    callback: Function,
-    contactsPromise: Promise,
-    checked: Boolean
-  },
   data() {
-    return {
-      posts: [
-        { id: 1, title: "My journey with Vue" },
-        { id: 2, title: "Blogging with Vue" },
-        { id: 3, title: "Why Vue is so fun" }
-      ],
-      message: "Hello Vue!",
-      firstName: "Foo",
-      lastName: "Bar",
-      fullName: ""
-    };
+    return {};
   },
   methods: {
-    welcome: function() {
-      // `this` inside methods points to the Vue instance
-      alert("Hello " + this.fullName + "!");
-      // `event` is the native DOM event
+    callNow() {
+      this.$toast.open({
+        message: "Something happened correctly!",
+        type: "is-success"
+      });
+    },
+    fullSizeImg() {
+      this.$toast.open({
+        message: "Something happened correctly!",
+        type: "is-success"
+      });
     }
   }
 };
 </script>
 
-<style>
+<style scoped lang="scss">
+h1 {
+  color: #0083e8;
+  font-family: "Georgia", Sans-serif;
+  text-transform: uppercase;
+  font-size: 39px;
+}
+
+section {
+  padding-top: 30px;
+  padding-bottom: 0px;
+}
+.box {
+  color: white;
+  background-color: #0083e8;
+}
 </style>

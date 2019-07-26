@@ -1,24 +1,29 @@
 <template>
   <div>
-    <section class="hero is-link is-primary-with-navbar is-fixed-bottom">
-      <div class="hero-body">
-        <div class="container">
-          <p class="title">Fullheight hero with navbar</p>
-        </div>
-      </div>
-    </section>
-  </div>
-  <!-- <div>
-    <nav class="navbar is-fixed-bottom is-success is-link">
-      <div class="navbar-item-active-color">
-        <a class="navbar-item">Call Now</a>
-      </div>
+    <nav class="navbar is-fixed-bottom">
+      <button @click="callPhone" class="button is-large is-fullwidth is-primary">
+        <span class="icon is-small">
+          <i class="fas fa-phone-alt"></i>
+        </span>
+        Call Now!
+      </button>
     </nav>
-  </div>-->
+  </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      phone: "9044654444"
+    };
+  },
+  methods: {
+    callPhone() {
+      alert(this.phone);
+    }
+  }
+};
 </script>
 
 <style>
