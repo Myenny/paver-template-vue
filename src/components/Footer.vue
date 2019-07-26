@@ -20,13 +20,20 @@ export default {
   },
   methods: {
     callPhone() {
-      alert(this.phone);
+      this.$toast.open({
+        message: this.phone,
+        type: "is-success"
+      });
     }
   }
 };
 </script>
 
 <style scoped="scss">
+.button.is-large {
+  padding-bottom: 50px;
+}
+
 button {
   padding-top: 20px;
 }

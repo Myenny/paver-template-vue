@@ -22,27 +22,38 @@
           </section>
 
           <section class="section">
-            <div class="columns">
-              <div class="column is-one-quarter">
-                <figure class="image is-96x96" @click="fullSizeImg()">
+            <div class="columns is-multiline">
+              <!-- modal -->
+              <div :class="{'is-active':showModal}" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                  <p class="image is-5by4">
+                    <img src="https://bulma.io/images/placeholders/128x128.png" />
+                  </p>
+                </div>
+                <button @click="modalClose()" class="modal-close is-large" aria-label="close"></button>
+              </div>
+              <!-- modal -->
+              <div class="column is-one-quarter-desktop is-half-tablet">
+                <figure @click="showModal = true" class="image is-square">
                   <img src="https://bulma.io/images/placeholders/128x128.png" />
                 </figure>
               </div>
 
-              <div class="column is-one-quarter">
-                <figure class="image is-96x96">
+              <div class="column is-one-quarter-desktop is-half-tablet">
+                <figure class="image is-square">
                   <img src="https://bulma.io/images/placeholders/128x128.png" />
                 </figure>
               </div>
 
-              <div class="column is-one-quarter">
-                <figure class="image is-96x96">
+              <div class="column is-one-quarter-desktop is-half-tablet">
+                <figure class="image is-square">
                   <img src="https://bulma.io/images/placeholders/128x128.png" />
                 </figure>
               </div>
 
-              <div class="column is-one-quarter">
-                <figure class="image is-96x96">
+              <div class="column is-one-quarter-desktop is-half-tablet">
+                <figure class="image is-square">
                   <img src="https://bulma.io/images/placeholders/128x128.png" />
                 </figure>
               </div>
@@ -58,20 +69,19 @@
 export default {
   name: "Welcome",
   data() {
-    return {};
+    return {
+      showModal: false
+    };
   },
   methods: {
-    callNow() {
-      this.$toast.open({
-        message: "Something happened correctly!",
-        type: "is-success"
-      });
+    modalClose() {
+      this.showModal = false;
     },
-    fullSizeImg() {
-      this.$toast.open({
-        message: "Something happened correctly!",
-        type: "is-success"
-      });
+    callNow() {
+      // this.$toast.open({
+      //   message: "Something happened correctly!",
+      //   type: "is-success"
+      // });
     }
   }
 };
